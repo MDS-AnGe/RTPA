@@ -1,11 +1,27 @@
-import React from 'react'
+import React from 'react';
+    import Main from './main';
+    import UIManager from './ui_manager';
+    import Perception from './perception';
+    import Interpreter from './interpreter';
+    import GameState from './game_state';
+    import DecisionEngine from './decision_engine';
+    import Persistence from './persistence';
+    import Config from './config';
 
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <p>Start prompting (or editing) to see magic happen :)</p>
-    </div>
-  )
-}
+    const App: React.FC = () => {
+      return (
+        <div className="App">
+          <h1>Real-Time Poker Assistant</h1>
+          <Main />
+          <UIManager />
+          <Perception />
+          <Interpreter />
+          <GameState />
+          <DecisionEngine />
+          <Persistence />
+          <Config />
+        </div>
+      );
+    };
 
-export default App
+    export default App;
